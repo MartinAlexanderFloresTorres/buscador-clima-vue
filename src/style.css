@@ -1,0 +1,113 @@
+:root {
+  --blanco: #fff;
+  --primary: #f59e0b;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url(../img/bg_clima.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  color: var(--blanco);
+  font-size: 2rem;
+}
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+
+.contenedor {
+  max-width: 100rem;
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .buscador-clima {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+  }
+}
+.formulario,
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formulario label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.formulario input[type='text'],
+.formulario select {
+  padding: 1rem;
+  background-color: transparent;
+  border: 0.3rem solid var(--blanco);
+  border-radius: 1rem;
+  color: var(--blanco);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.formulario select option {
+  background: #171a1c;
+}
+.formulario input[type='submit'] {
+  background-color: var(--primary);
+  border: none;
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.campo ::placeholder {
+  color: var(--blanco);
+  opacity: 1;
+}
+
+.resultado {
+  background-color: var(--blanco);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #2b353b;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.resultado .actual {
+  font-size: 6rem;
+  margin: 0;
+  font-weight: 900;
+}
+.temperaturas {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.temperaturas p {
+  font-weight: 900;
+}
+.temperaturas span {
+  font-weight: 400;
+}
+
+.instrucciones,
+.no-resultados {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 2rem;
+}
